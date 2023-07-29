@@ -287,7 +287,7 @@ const Mainpage = () => {
             </label>
             <label htmlFor="">
               Mensagem
-              <textarea required></textarea>
+              <textarea type="text" name="message" required></textarea>
             </label>
             <input
               type="hidden"
