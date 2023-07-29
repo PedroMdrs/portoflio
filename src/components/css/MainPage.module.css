@@ -120,7 +120,7 @@ body {
 .nameContainer a::before {
   content: "";
   display: inline-block;
-  background-image: url(downloadIcon.svg);
+  background-image: url(../downloadIcon.svg);
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -258,7 +258,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4.56rem;
-  color: var(--g-1, #fafafa);
+  color: var(--color-g1);
   font-size: 1.125rem;
   width: 100%;
   align-self: flex-end;
@@ -274,7 +274,7 @@ body {
 .formacao .cursos h4::before {
   content: "";
   display: inline-block;
-  background-image: url(menu_book.svg);
+  background-image: url(../menu_book.svg);
   width: 1.5rem;
   height: 1.5rem;
   position: relative;
@@ -314,7 +314,7 @@ body {
 .formacao .idiomas h4::before {
   content: "";
   display: inline-block;
-  background-image: url(translateicon.svg);
+  background-image: url(../translateicon.svg);
   width: 1.5rem;
   height: 1.5rem;
   position: relative;
