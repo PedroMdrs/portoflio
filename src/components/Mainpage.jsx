@@ -141,7 +141,7 @@ const Mainpage = () => {
               Pedro Medeiros<span>.</span>
             </h1>
           </div>
-          <a href="/Curriculo.pdf" download={"CurriculoPedroMedeiros"}>
+          <a href="Curriculo.pdf" download={"CurriculoPedroMedeiros"}>
             Currículo
           </a>
         </div>
