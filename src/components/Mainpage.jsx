@@ -120,7 +120,7 @@ const Mainpage = () => {
             onMouseOver={() => setGithub(true)}
             onMouseOut={() => setGithub(false)}
           >
-            <a href="https://github.com/PedroMdrs/trading-archives">
+            <a href="https://github.com/PedroMdrs">
               <Icons icon={"github"} active={github} />
             </a>
           </li>
