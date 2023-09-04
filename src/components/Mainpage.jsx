@@ -152,10 +152,12 @@ const Mainpage = () => {
           <h4>trading archives </h4>
           <div className={`${styles.exp1Description}`}>
             <p>
-              Trading Archives é um <span>aplicativo web</span> criado por mim
-              que oferece aos usuários a possibilidade de acompanhar seus lucros
-              e perdas nas negociações realizadas na corretora Binance por meio
-              de um gráfico intuitivo.
+              Trading Archives é um <span>aplicativo web</span>, desenvolvido
+              por mim, capaz de se comunicar com a Api da corretora Binance, e
+              de forma intuitiva e informativa, disponibilizar negociações
+              realizadas em qualquer período de tempo para os usuários através
+              de uma interface gráfica, facilitando o gerenciamento de
+              portfolio.
             </p>
             <ul className={`${styles.techs}`}>
               <li className={`${styles.html}`}>HTML</li>
@@ -234,13 +236,22 @@ const Mainpage = () => {
             <div>
               <ul>
                 <li>
-                  Desenvolvimento Web Full Stack ProgBr <span>50H</span>
+                  React com Typescript / Origamid <span>10H</span>
                 </li>
                 <li>
-                  React Completo Origamid <span>36H</span>
+                  Typescript para Inicantes/ Origamid <span>22H</span>
                 </li>
                 <li>
-                  UI/UX Origamid <span>36H</span>
+                  React Completo / Origamid <span>36H</span>
+                </li>
+                <li>
+                  UX Design Heurísticas / Origamid <span>16H</span>
+                </li>
+                <li>
+                  UI Design para Iniciantes / Origamid <span>34H</span>
+                </li>
+                <li>
+                  Desenvolvimento Web Full Stack / ProgBr <span>50H</span>
                 </li>
               </ul>
             </div>
