@@ -1,0 +1,46 @@
+@use "../../colors" as *;
+@use "../../gaps" as *;
+@use "../../mixins" as *;
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .logo {
+    position: relative;
+    @include type-2(18px);
+    @include hover-divider;
+  }
+
+  .routes {
+    display: flex;
+    gap: $gap3;
+    .route {
+      @include type-1(18px);
+      position: relative;
+      overflow: hidden;
+      color: $g8;
+      @include hover-divider;
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: $gap1;
+    position: relative;
+    a,
+    div {
+      flex-shrink: 0;
+      color: $g8;
+      cursor: pointer;
+    }
+  }
+}
+
+[data-theme="dark"] .logo {
+  color: $g1;
+}
+[data-theme="light"] .logo {
+  color: $g8;
+}

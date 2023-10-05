@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav .logo {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+.nav .logo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+}
+.nav .logo:hover:after,
+.nav .logo :focus:after,
+.nav .logo :active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.nav .routes {
+  display: flex;
+  gap: 20px;
+}
+.nav .routes .route {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  position: relative;
+  overflow: hidden;
+  color: #7a7a7a;
+}
+.nav .routes .route::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+}
+.nav .routes .route:hover:after,
+.nav .routes .route :focus:after,
+.nav .routes .route :active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.nav .icons {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+.nav .icons a,
+.nav .icons div {
+  flex-shrink: 0;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
+[data-theme=dark] .logo {
+  color: #fafafa;
+}
+
+[data-theme=light] .logo {
+  color: #7a7a7a;
+}/*# sourceMappingURL=Header.module.css.map */

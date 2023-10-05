@@ -1,0 +1,89 @@
+@use "colors";
+@use "gaps";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+@mixin type-1($size) {
+  font-weight: 500;
+  @if $size == 18px {
+    font-size: 18px;
+    line-height: 32px;
+  } @else if $size == 24px {
+    font-size: 24px;
+    line-height: 36px;
+  } @else if $size == 32px {
+    font-size: 32px;
+    line-height: 40px;
+  } @else if $size == 40px {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@mixin type-2($size) {
+  font-family: "Poppins", sans-serif;
+  @if $size == 18px {
+    font-size: 18px;
+    line-height: 20px;
+  } @else if $size == 80px {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 120px;
+  }
+}
+
+@mixin hover-divider {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+  }
+  &:hover:after,
+  :focus:after,
+  :active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+@mixin static-divider {
+  &::after {
+    content: "";
+    position: absolute !important;
+    z-index: 1 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 1px !important;
+    bottom: -4px !important;
+    transition-property: width !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease-out !important;
+    background: linear-gradient(270deg, #dc1891 0%, #931061 100%) !important;
+  }
+}
+@mixin button {
+  border: 1px solid colors.$g5;
+  background: colors.$g5;
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  &:hover {
+    background: transparent;
+  }
+}
+
+@mixin column-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

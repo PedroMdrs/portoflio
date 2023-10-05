@@ -1,0 +1,23 @@
+@use "reset" as *;
+@use "colors" as *;
+@use "mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap");
+
+::selection {
+  background: #810e55;
+}
+
+body {
+  height: 100vh;
+  font-family: "Archivo", sans-serif;
+}
+[data-theme="light"] {
+  background: $g2;
+}
+[data-theme="dark"] {
+  background: $g15;
+}
+.active {
+  position: relative;
+  @include static-divider;
+}
