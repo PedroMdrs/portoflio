@@ -4,8 +4,15 @@
   justify-content: space-around;
   align-items: center;
 }
+.nav.dark {
+  background: #000000;
+}
+.nav.light {
+  background: #f0f0f0;
+}
 .nav .logo {
   position: relative;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -29,6 +36,12 @@
   left: 0;
   right: auto;
   width: 100%;
+}
+.nav .logo.dark {
+  color: #fafafa;
+}
+.nav .logo.light {
+  color: #000000;
 }
 .nav .routes {
   display: flex;
@@ -72,12 +85,4 @@
   flex-shrink: 0;
   color: #7a7a7a;
   cursor: pointer;
-}
-
-[data-theme=dark] .logo {
-  color: #fafafa;
-}
-
-[data-theme=light] .logo {
-  color: #7a7a7a;
 }/*# sourceMappingURL=Header.module.css.map */

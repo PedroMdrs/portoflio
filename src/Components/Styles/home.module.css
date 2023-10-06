@@ -15,15 +15,28 @@
   gap: 12px;
 }
 .home .title h1 {
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 120px;
 }
+.home .title h1.dark {
+  color: #fafafa;
+}
+.home .title h1.light {
+  color: #000000;
+}
 .home .title h2 {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
+}
+.home .title h2.dark {
+  color: #fafafa;
+}
+.home .title h2.light {
+  color: #000000;
 }
 .home .title h2 span {
   background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
@@ -32,7 +45,6 @@
   -webkit-text-fill-color: transparent;
 }
 .home a {
-  color: #000000;
   border: 1px solid #b8b8b8;
   background: #b8b8b8;
   display: inline-flex;

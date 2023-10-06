@@ -6,6 +6,7 @@ import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import { ThemeStorage } from "./Context/Context";
 import React from "react";
+
 const App = () => {
   React.useEffect(() => {
     document.querySelector("body")?.setAttribute("data-theme", "light");

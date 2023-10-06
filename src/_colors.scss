@@ -9,3 +9,12 @@ $g8: #7a7a7a;
 $g9: #666666;
 $g14: #141414;
 $g15: #000000;
+
+$dark: (
+  primary: $g15,
+  text: $g1,
+);
+$light: (
+  primary: $g2,
+  text: $g15,
+);

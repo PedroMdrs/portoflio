@@ -11,9 +11,9 @@ const Header = () => {
     <header>
       <nav
         className={`${styles.nav} 
-         ${theme}`}
+         ${styles[theme]}`}
       >
-        <NavLink className={`${styles.logo}`} to={"/"} end>
+        <NavLink className={`${styles.logo}  ${styles[theme]}`} to={"/"} end>
           Pedro Medeiros
         </NavLink>
 

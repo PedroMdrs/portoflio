@@ -1,19 +1,22 @@
-@use "../../colors";
-@use "../../gaps";
-@use "../../mixins";
+@use "../../colors" as *;
+@use "../../gaps" as *;
+@use "../../mixins" as *;
 
 .home {
-  @include mixins.column-flex;
-  gap: gaps.$gap7;
-  margin-top: gaps.$gap9;
+  @include column-flex;
+  gap: $gap7;
+  margin-top: $gap9;
   .title {
-    @include mixins.column-flex;
-    gap: gaps.$gap1;
+    @include column-flex;
+    gap: $gap1;
     h1 {
-      @include mixins.type-2(80px);
+      @include type-2(80px);
+      @include themify("color", "text");
     }
     h2 {
-      @include mixins.type-1(24px);
+      @include type-1(24px);
+      @include themify("color", "text");
+
       span {
         background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
         background-clip: text;
@@ -23,14 +26,7 @@
     }
   }
   a {
-    @include mixins.button;
-    @include mixins.type-1(18px);
+    @include button;
+    @include type-1(18px);
   }
-}
-[data-theme="dark"] .home .title h1 {
-  color: $g1;
-}
-[data-theme="light"] .home .title h1,
-[data-theme="light"] .home .title h2 {
-  color: $g15;
 }

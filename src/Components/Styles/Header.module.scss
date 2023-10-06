@@ -6,11 +6,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @include themify("background", "primary");
 
   .logo {
     position: relative;
     @include type-2(18px);
     @include hover-divider;
+    @include themify("color", "text");
   }
 
   .routes {
@@ -36,11 +38,4 @@
       cursor: pointer;
     }
   }
-}
-
-[data-theme="dark"] .logo {
-  color: $g1;
-}
-[data-theme="light"] .logo {
-  color: $g8;
 }
