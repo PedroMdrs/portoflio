@@ -83,8 +83,6 @@ $themes: (
   }
 }
 @mixin button {
-  border: 1px solid $g5;
-  background: $g5;
   display: inline-flex;
   padding: 10px 20px;
   align-items: center;

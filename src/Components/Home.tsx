@@ -12,7 +12,11 @@ const Home = () => {
           infinite energy to learn new things.
         </h2>
       </div>
-      <a href="Resume.pdf" download="PedroMedeirosResume.pdf">
+      <a
+        className={styles[theme]}
+        href="Resume.pdf"
+        download="PedroMedeirosResume.pdf"
+      >
         Download Resume
       </a>
     </div>

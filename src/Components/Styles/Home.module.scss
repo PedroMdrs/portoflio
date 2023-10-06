@@ -27,6 +27,14 @@
   }
   a {
     @include button;
+    @include themify("background", "button");
+    @include themify("color", "text");
     @include type-1(18px);
+    border: 2px solid;
+    @include themify("border-color", "border");
+    &:hover {
+      @include themify("border-color", "border");
+      background: transparent;
+    }
   }
 }

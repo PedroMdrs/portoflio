@@ -45,8 +45,6 @@
   -webkit-text-fill-color: transparent;
 }
 .home a {
-  border: 1px solid #b8b8b8;
-  background: #b8b8b8;
   display: inline-flex;
   padding: 10px 20px;
   align-items: center;
@@ -55,7 +53,35 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
+  border: 2px solid;
 }
 .home a:hover {
   background: transparent;
+}
+.home a.dark {
+  background: #292929;
+}
+.home a.light {
+  background: #b8b8b8;
+}
+.home a.dark {
+  color: #fafafa;
+}
+.home a.light {
+  color: #000000;
+}
+.home a.dark {
+  border-color: #292929;
+}
+.home a.light {
+  border-color: #b8b8b8;
+}
+.home a:hover {
+  background: transparent;
+}
+.home a:hover.dark {
+  border-color: #292929;
+}
+.home a:hover.light {
+  border-color: #b8b8b8;
 }/*# sourceMappingURL=Home.module.css.map */

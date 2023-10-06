@@ -7,14 +7,19 @@ $g5: #b8b8b8;
 $g6: #a3a3a3;
 $g8: #7a7a7a;
 $g9: #666666;
+$g12: #292929;
 $g14: #141414;
 $g15: #000000;
 
 $dark: (
   primary: $g15,
   text: $g1,
+  button: $g12,
+  border: $g12,
 );
 $light: (
   primary: $g2,
   text: $g15,
+  button: $g5,
+  border: $g5,
 );
