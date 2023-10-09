@@ -1,5 +1,5 @@
 import { useThemeContext } from "../Context/Context";
-import styles from "./Styles/home.module.css";
+import styles from "./Styles/Home.module.css";
 
 const Home = () => {
   const { theme } = useThemeContext();
@@ -8,8 +8,8 @@ const Home = () => {
       <div className={`${styles.title}`}>
         <h1 className={styles[theme]}>Hi I'm Pedro Medeiros</h1>
         <h2 className={styles[theme]}>
-          <span>&lt;/</span> A Front-end Developer <span>&gt; </span>with an
-          infinite energy to learn new things.
+          <span>&lt;/</span> A Front-end Developer <span>&gt; </span>with lots
+          of energy to learn new things.
         </h2>
       </div>
       <a

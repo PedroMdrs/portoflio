@@ -12,29 +12,20 @@
     h1 {
       @include type-2(80px);
       @include themify("color", "text");
+      word-break: keep-all;
     }
     h2 {
       @include type-1(24px);
       @include themify("color", "text");
 
       span {
-        background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include text-gradient;
       }
     }
   }
   a {
     @include button;
-    @include themify("background", "button");
-    @include themify("color", "text");
     @include type-1(18px);
-    border: 2px solid;
     @include themify("border-color", "border");
-    &:hover {
-      @include themify("border-color", "border");
-      background: transparent;
-    }
   }
 }

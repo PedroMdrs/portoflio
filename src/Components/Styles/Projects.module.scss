@@ -1,0 +1,47 @@
+@use "../../colors" as *;
+@use "../../gaps" as *;
+@use "../../mixins" as *;
+
+.projects {
+  @include column-flex;
+  margin-top: $gap9;
+  gap: $gap6;
+  h3 {
+    @include type-2(80px);
+    @include themify("color", "text");
+  }
+  .cards {
+    display: grid;
+    column-gap: $gap4;
+    row-gap: $gap6;
+    grid-template-columns: 1fr 1fr;
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 560px;
+      padding: $gap3;
+      gap: $gap2;
+      min-height: 224px;
+      @include card;
+      p:nth-child(1) {
+        @include type-2(32px);
+        @include themify("color", "card-title");
+      }
+      p:nth-child(2) {
+        @include type-1(18px);
+        @include themify("color", "text");
+      }
+      a {
+        @include type-1(18px);
+        @include text-gradient;
+      }
+    }
+  }
+  .repo {
+    @include text-gradient;
+    @include type-1(18px);
+    margin-bottom: $gap7;
+    @include hover-divider;
+  }
+}

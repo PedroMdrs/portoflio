@@ -8,18 +8,25 @@ $g6: #a3a3a3;
 $g8: #7a7a7a;
 $g9: #666666;
 $g12: #292929;
+$g13: #1c1c1c;
 $g14: #141414;
 $g15: #000000;
 
 $dark: (
   primary: $g15,
-  text: $g1,
+  text: $g3,
   button: $g12,
   border: $g12,
+  card: $g14,
+  card-border: $g13,
+  card-title: $g9,
 );
 $light: (
   primary: $g2,
   text: $g15,
   button: $g5,
   border: $g5,
+  card: $g3,
+  card-title: $g6,
+  card-border: $g4,
 );

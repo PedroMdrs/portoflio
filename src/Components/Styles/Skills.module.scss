@@ -1,0 +1,44 @@
+@use "../../colors" as *;
+@use "../../gaps" as *;
+@use "../../mixins" as *;
+.skills {
+  display: grid;
+  row-gap: $gap7;
+  column-gap: $gap7;
+  align-items: start;
+  grid-template: auto auto / 1fr 1fr;
+  margin-top: $gap9;
+  h3 {
+    justify-self: center;
+    grid-column: span 2;
+    @include type-2(80px);
+    @include themify("color", "text");
+  }
+  .cardDesc {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: $gap3;
+      p:nth-child(1) {
+        @include type-1(40px);
+        @include themify("color", "card-title");
+      }
+      p:nth-child(2) {
+        @include type-1(18px);
+        @include themify("color", "text");
+      }
+    }
+  }
+  .iconsCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap3;
+    div {
+      @include card;
+      width: fit-content;
+      svg {
+        color: currentColor;
+      }
+    }
+  }
+}

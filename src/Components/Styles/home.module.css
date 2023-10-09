@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 120px;
-  margin-top: 220px;
+  margin-top: 260px;
 }
 .home .title {
   display: flex;
@@ -20,9 +20,10 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 120px;
+  word-break: keep-all;
 }
 .home .title h1.dark {
-  color: #fafafa;
+  color: #e0e0e0;
 }
 .home .title h1.light {
   color: #000000;
@@ -33,7 +34,7 @@
   line-height: 36px;
 }
 .home .title h2.dark {
-  color: #fafafa;
+  color: #e0e0e0;
 }
 .home .title h2.light {
   color: #000000;
@@ -49,14 +50,11 @@
   padding: 10px 20px;
   align-items: center;
   gap: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
+  border: 1px solid;
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
-  border: 2px solid;
-}
-.home a:hover {
-  background: transparent;
 }
 .home a.dark {
   background: #292929;
@@ -65,16 +63,10 @@
   background: #b8b8b8;
 }
 .home a.dark {
-  color: #fafafa;
+  color: #e0e0e0;
 }
 .home a.light {
   color: #000000;
-}
-.home a.dark {
-  border-color: #292929;
-}
-.home a.light {
-  border-color: #b8b8b8;
 }
 .home a:hover {
   background: transparent;
@@ -83,5 +75,11 @@
   border-color: #292929;
 }
 .home a:hover.light {
+  border-color: #b8b8b8;
+}
+.home a.dark {
+  border-color: #292929;
+}
+.home a.light {
   border-color: #b8b8b8;
 }/*# sourceMappingURL=Home.module.css.map */

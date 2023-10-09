@@ -4,7 +4,7 @@
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   @include themify("background", "primary");
 
@@ -19,11 +19,10 @@
     display: flex;
     gap: $gap3;
     .route {
+      @include hover-divider;
       @include type-1(18px);
-      position: relative;
       overflow: hidden;
       color: $g8;
-      @include hover-divider;
     }
   }
 
