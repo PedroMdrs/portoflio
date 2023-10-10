@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, json } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
@@ -8,12 +8,8 @@ import { ThemeStorage, useThemeContext } from "./Context/Context";
 import React from "react";
 
 const App = () => {
-  const { setTheme } = useThemeContext();
-  React.useEffect(() => {
-    document.querySelector("body")?.setAttribute("data-theme", "light");
-    const localTheme = JSON.parse(localStorage.getItem("theme") || "");
-    if (localTheme !== "") setTheme(localTheme);
-  }, []);
+  const { theme, setTheme } = useThemeContext();
+
   return (
     <ThemeStorage>
       <HashRouter>

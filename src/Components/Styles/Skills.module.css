@@ -87,4 +87,7 @@
 }
 .skills .iconsCard div svg {
   color: currentColor;
+}
+.skills .iconsCard .active {
+  border: 1px solid #dc1891 !important;
 }/*# sourceMappingURL=Skills.module.css.map */

@@ -3,6 +3,7 @@ import styles from "./Styles/Home.module.css";
 
 const Home = () => {
   const { theme } = useThemeContext();
+
   return (
     <div className={styles.home}>
       <div className={`${styles.title}`}>

@@ -111,46 +111,65 @@ const Skills = () => {
       </div>
       <div className={styles.iconsCard}>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "html" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("html")}
         >
           <Html />
         </div>
-        <div className={styles[theme]} onMouseOver={() => setActiveIcon("css")}>
+        <div
+          className={`${styles[theme]} ${
+            activeIcon === "css" ? styles.active : ""
+          }`}
+          onMouseOver={() => setActiveIcon("css")}
+        >
           <Css />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "javascript" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("javascript")}
         >
           <Javascript />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "react" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("react")}
         >
           <ReactIcon />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "typescript" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("typescript")}
         >
           <Typescript />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "sass" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("sass")}
         >
           <Sass />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "bootstrap" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("bootstrap")}
         >
           <Bootstrap />
         </div>
         <div
-          className={styles[theme]}
+          className={`${styles[theme]} ${
+            activeIcon === "mongodb" ? styles.active : ""
+          }`}
           onMouseOver={() => setActiveIcon("mongodb")}
         >
           <Mongodb />

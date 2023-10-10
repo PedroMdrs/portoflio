@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, json } from "react-router-dom";
 import Github from "./Icons/Github";
 import Linkedin from "./Icons/Linkedin";
 import { useThemeContext } from "../Context/Context";
@@ -40,7 +40,10 @@ const Header = () => {
           {theme === "dark" ? (
             <div
               onClick={() => {
-                setTheme("light");
+                setTheme(() => {
+                  localStorage.setItem("theme", JSON.stringify("light"));
+                  return "light";
+                });
                 document
                   .querySelector("body")
                   ?.setAttribute("data-theme", "light");
@@ -51,7 +54,10 @@ const Header = () => {
           ) : (
             <div
               onClick={() => {
-                setTheme("dark");
+                setTheme(() => {
+                  localStorage.setItem("theme", JSON.stringify("dark"));
+                  return "dark";
+                });
                 document
                   .querySelector("body")
                   ?.setAttribute("data-theme", "dark");

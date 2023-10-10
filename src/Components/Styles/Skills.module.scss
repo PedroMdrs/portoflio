@@ -40,5 +40,8 @@
         color: currentColor;
       }
     }
+    .active {
+      border: 1px solid $p1 !important;
+    }
   }
 }

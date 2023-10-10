@@ -1,5 +1,4 @@
 import React from "react";
-import { json } from "react-router-dom";
 
 type theme = "light" | "dark";
 
@@ -21,10 +20,22 @@ export const useThemeContext = () => {
 };
 
 export const ThemeStorage = ({ children }: React.PropsWithChildren) => {
-  const [theme, setTheme] = React.useState<theme>("light");
+  const [theme, setTheme] = React.useState<theme>(() => {
+    const localTheme = JSON.parse(localStorage.getItem("theme") || "");
+    if (localTheme === "light") {
+      return "light";
+    } else {
+      return "dark";
+    }
+  });
 
   React.useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
+    const localTheme = JSON.parse(localStorage.getItem("theme") || "");
+    if (localTheme === "light") {
+      document.querySelector("body")?.setAttribute("data-theme", "light");
+    } else {
+      document.querySelector("body")?.setAttribute("data-theme", "dark");
+    }
   }, [theme]);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
