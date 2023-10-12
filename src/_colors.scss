@@ -20,6 +20,11 @@ $dark: (
   card: $g14,
   card-border: $g13,
   card-title: $g9,
+  mobile-menu:
+    rgba(
+      $color: $g15,
+      $alpha: 0.8,
+    ),
 );
 $light: (
   primary: $g2,
@@ -29,4 +34,9 @@ $light: (
   card: $g3,
   card-title: $g6,
   card-border: $g4,
+  mobile-menu:
+    rgba(
+      $color: $g2,
+      $alpha: 0.8,
+    ),
 );

@@ -132,3 +132,16 @@ $themes: (
   }
   @include box-shadow;
 }
+
+@mixin media($device) {
+  @if $device == t {
+    @media only screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+  @if $device == m {
+    @media only screen and (max-width: 760px) {
+      @content;
+    }
+  }
+}

@@ -17,162 +17,164 @@ const Skills = () => {
   return (
     <section className={styles.skills}>
       <h3 className={styles[theme]}>Skills</h3>
-      <div className={styles.cardDesc}>
-        {activeIcon === "html" ? (
-          <div>
-            <p className={styles[theme]}>HTML</p>
-            <p className={styles[theme]}>
-              HTML is a standard markup language for web page creation. It
-              allows the creation and structure of sections, paragraphs, and
-              links using HTML elements.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "css" ? (
-          <div>
-            <p className={styles[theme]}>CSS</p>
-            <p className={styles[theme]}>
-              CSS is a stylesheet language and describes how elements should be
-              rendered on screen, on paper, in speech, or on other media.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "javascript" ? (
-          <div>
-            <p className={styles[theme]}>Javascript</p>
-            <p className={styles[theme]}>
-              Javascript is a dynamic programming language that allows you to
-              implement dynamic elements to your page.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "react" ? (
-          <div>
-            <p className={styles[theme]}>React</p>
-            <p className={styles[theme]}>
-              React is a JavaScript library for building user interfaces.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "typescript" ? (
-          <div>
-            <p className={styles[theme]}>Typescript</p>
-            <p className={styles[theme]}>
-              TypeScript is a programming language that's a superset of
-              JavaScript, which means it understands all of JavaScript's syntax
-              and capabilities, while adding additional features.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "sass" ? (
-          <div>
-            <p className={styles[theme]}>Sass</p>
-            <p className={styles[theme]}>
-              Sass is a preprocessor that contains features that don't exist in
-              CSS yet like nesting, mixins, inheritance etc.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "bootstrap" ? (
-          <div>
-            <p className={styles[theme]}>Bootstrap</p>
-            <p className={styles[theme]}>
-              Bootstrap is a front-end framework that provides CSS structures
-              for creating responsive websites and applications quickly and
-              simply.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-        {activeIcon === "mongodb" ? (
-          <div>
-            <p className={styles[theme]}>MongoDB</p>
-            <p className={styles[theme]}>
-              MongoDB is a document database used to build highly available and
-              scalable internet applications.
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-      <div className={styles.iconsCard}>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "html" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("html")}
-        >
-          <Html />
+      <div>
+        <div className={styles.cardDesc}>
+          {activeIcon === "html" ? (
+            <div>
+              <p className={styles[theme]}>HTML</p>
+              <p className={styles[theme]}>
+                HTML is a standard markup language for web page creation. It
+                allows the creation and structure of sections, paragraphs, and
+                links using HTML elements.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "css" ? (
+            <div>
+              <p className={styles[theme]}>CSS</p>
+              <p className={styles[theme]}>
+                CSS is a stylesheet language and describes how elements should
+                be rendered on screen, on paper, in speech, or on other media.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "javascript" ? (
+            <div>
+              <p className={styles[theme]}>Javascript</p>
+              <p className={styles[theme]}>
+                Javascript is a dynamic programming language that allows you to
+                implement dynamic elements to your page.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "react" ? (
+            <div>
+              <p className={styles[theme]}>React</p>
+              <p className={styles[theme]}>
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "typescript" ? (
+            <div>
+              <p className={styles[theme]}>Typescript</p>
+              <p className={styles[theme]}>
+                TypeScript is a programming language that's a superset of
+                JavaScript, which means it understands all of JavaScript's
+                syntax and capabilities, while adding additional features.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "sass" ? (
+            <div>
+              <p className={styles[theme]}>Sass</p>
+              <p className={styles[theme]}>
+                Sass is a preprocessor that contains features that don't exist
+                in CSS yet like nesting, mixins, inheritance etc.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "bootstrap" ? (
+            <div>
+              <p className={styles[theme]}>Bootstrap</p>
+              <p className={styles[theme]}>
+                Bootstrap is a front-end framework that provides CSS structures
+                for creating responsive websites and applications quickly and
+                simply.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          {activeIcon === "mongodb" ? (
+            <div>
+              <p className={styles[theme]}>MongoDB</p>
+              <p className={styles[theme]}>
+                MongoDB is a document database used to build highly available
+                and scalable internet applications.
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "css" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("css")}
-        >
-          <Css />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "javascript" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("javascript")}
-        >
-          <Javascript />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "react" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("react")}
-        >
-          <ReactIcon />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "typescript" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("typescript")}
-        >
-          <Typescript />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "sass" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("sass")}
-        >
-          <Sass />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "bootstrap" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("bootstrap")}
-        >
-          <Bootstrap />
-        </div>
-        <div
-          className={`${styles[theme]} ${
-            activeIcon === "mongodb" ? styles.active : ""
-          }`}
-          onMouseOver={() => setActiveIcon("mongodb")}
-        >
-          <Mongodb />
+        <div className={styles.iconsCard}>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "html" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("html")}
+          >
+            <Html />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "css" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("css")}
+          >
+            <Css />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "javascript" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("javascript")}
+          >
+            <Javascript />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "react" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("react")}
+          >
+            <ReactIcon />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "typescript" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("typescript")}
+          >
+            <Typescript />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "sass" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("sass")}
+          >
+            <Sass />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "bootstrap" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("bootstrap")}
+          >
+            <Bootstrap />
+          </div>
+          <div
+            className={`${styles[theme]} ${
+              activeIcon === "mongodb" ? styles.active : ""
+            }`}
+            onMouseOver={() => setActiveIcon("mongodb")}
+          >
+            <Mongodb />
+          </div>
         </div>
       </div>
     </section>

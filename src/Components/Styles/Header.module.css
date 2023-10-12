@@ -1,4 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+.logo {
+  position: relative;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  position: relative;
+}
+.logo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+}
+.logo:hover:after,
+.logo :focus:after,
+.logo :active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.logo.dark {
+  color: #e0e0e0;
+}
+.logo.light {
+  color: #000000;
+}
+@media only screen and (max-width: 760px) {
+  .logo {
+    align-self: center;
+  }
+}
+
+.routes {
+  display: flex;
+  gap: 20px;
+}
+.routes .route {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  overflow: hidden;
+  color: #7a7a7a;
+}
+.routes .route::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+}
+.routes .route:hover:after,
+.routes .route :focus:after,
+.routes .route :active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+.icons a,
+.icons div {
+  flex-shrink: 0;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -10,80 +95,149 @@
 .nav.light {
   background: #f0f0f0;
 }
-.nav .logo {
-  position: relative;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  position: relative;
+@media only screen and (max-width: 760px) {
+  .nav {
+    display: none;
+  }
 }
-.nav .logo::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
-}
-.nav .logo:hover:after,
-.nav .logo :focus:after,
-.nav .logo :active:after {
+
+.mobileNav {
+  display: none;
+  position: fixed;
   left: 0;
-  right: auto;
-  width: 100%;
+  top: 0;
+  z-index: 1;
 }
-.nav .logo.dark {
-  color: #e0e0e0;
+@media only screen and (max-width: 760px) {
+  .mobileNav {
+    display: block;
+    width: 100%;
+  }
 }
-.nav .logo.light {
-  color: #000000;
-}
-.nav .routes {
+.mobileNav > div {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid;
+}
+.mobileNav > div.dark {
+  background: rgba(0, 0, 0, 0.8);
+}
+.mobileNav > div.light {
+  background: rgba(240, 240, 240, 0.8);
+}
+.mobileNav > div.dark {
+  border-color: #292929;
+}
+.mobileNav > div.light {
+  border-color: #b8b8b8;
+}
+.mobileNav .burger {
+  height: 3em;
+  width: 3em;
+  position: relative;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s all;
+  background: transparent;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobileNav .burger:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.mobileNav .burger .burgerLines {
+  top: 50%;
+  margin-top: -0.125em;
+}
+.mobileNav .burger .burgerLines.dark {
+  background: #e0e0e0;
+}
+.mobileNav .burger .burgerLines.light {
+  background: #000000;
+}
+.mobileNav .burger .burgerLines, .mobileNav .burger .burgerLines:after, .mobileNav .burger .burgerLines:before {
+  pointer-events: none;
+  display: block;
+  content: "";
+  width: 80%;
+  border-radius: 3px;
+  height: 3px;
+  position: absolute;
+  transform: rotate(0);
+  background: inherit;
+}
+.mobileNav .burger .burgerLines:after {
+  width: 70%;
+  left: 0;
+  top: -10px;
+}
+.mobileNav .burger .burgerLines:before {
+  width: 70%;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.mobileNav .burger, .mobileNav .burger:after, .mobileNav .burger:before {
+  transition: all 0.2s;
+}
+.mobileNav .burger.open {
+  transform: rotate(135deg);
+}
+.mobileNav .burger.open .burgerLines:before, .mobileNav .burger.open .burgerLines:after {
+  left: 0;
+  top: 0px;
+}
+.mobileNav .burger.open .burgerLines:before {
+  width: 100%;
+  transform: rotate(90deg);
+}
+.mobileNav .burger.open .burgerLines:after {
+  display: none;
+}
+.mobileNav .mobileMenu {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.mobileNav .mobileMenu .routes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mobileNav .mobileMenu .icons {
   gap: 20px;
 }
-.nav .routes .route {
-  position: relative;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 32px;
-  overflow: hidden;
-  color: #7a7a7a;
+.mobileNav .mobileMenu .icons a.dark,
+.mobileNav .mobileMenu .icons div.dark {
+  color: #e0e0e0;
 }
-.nav .routes .route::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
+.mobileNav .mobileMenu .icons a.light,
+.mobileNav .mobileMenu .icons div.light {
+  color: #000000;
 }
-.nav .routes .route:hover:after,
-.nav .routes .route :focus:after,
-.nav .routes .route :active:after {
-  left: 0;
-  right: auto;
-  width: 100%;
+.mobileNav .menuClosed.mobileMenu {
+  display: none;
 }
-.nav .icons {
-  display: flex;
-  gap: 12px;
-  position: relative;
+
+.mobileNav.open {
+  width: 100vw;
+  height: 100vh;
 }
-.nav .icons a,
-.nav .icons div {
-  flex-shrink: 0;
-  color: #7a7a7a;
-  cursor: pointer;
+.mobileNav.open.dark {
+  background: rgba(0, 0, 0, 0.8);
+}
+.mobileNav.open.light {
+  background: rgba(240, 240, 240, 0.8);
+}
+.mobileNav.open > div {
+  border: none;
 }/*# sourceMappingURL=Header.module.css.map */

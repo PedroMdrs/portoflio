@@ -6,8 +6,14 @@
   @include column-flex;
   margin-top: $gap9;
   gap: $gap6;
+  @include media(m) {
+    margin-top: $gap8;
+  }
   h3 {
     @include type-2(80px);
+    @include media(m) {
+      @include type-2(32px);
+    }
     @include themify("color", "text");
   }
   .cards {
@@ -15,14 +21,20 @@
     column-gap: $gap4;
     row-gap: $gap6;
     grid-template-columns: 1fr 1fr;
+    @include media(t) {
+      grid-template-columns: 1fr;
+    }
+    @include media(m) {
+      gap: $gap4;
+    }
     .card {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      width: 560px;
+      max-width: 560px;
+      min-height: 224px;
       padding: $gap3;
       gap: $gap2;
-      min-height: 224px;
       @include card;
       p:nth-child(1) {
         @include type-2(32px);
@@ -41,7 +53,6 @@
   .repo {
     @include text-gradient;
     @include type-1(18px);
-    margin-bottom: $gap7;
     @include hover-divider;
   }
 }

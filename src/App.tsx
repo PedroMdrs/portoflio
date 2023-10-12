@@ -5,11 +5,8 @@ import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import { ThemeStorage, useThemeContext } from "./Context/Context";
-import React from "react";
 
 const App = () => {
-  const { theme, setTheme } = useThemeContext();
-
   return (
     <ThemeStorage>
       <HashRouter>

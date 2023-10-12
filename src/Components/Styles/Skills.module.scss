@@ -2,46 +2,88 @@
 @use "../../gaps" as *;
 @use "../../mixins" as *;
 .skills {
-  display: grid;
-  row-gap: $gap7;
-  column-gap: $gap7;
-  align-items: start;
-  grid-template: auto auto / 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: $gap7;
+  align-items: self-start;
   margin-top: $gap9;
+  @include media(t) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  @include media(m) {
+    margin-top: $gap8;
+  }
   h3 {
-    justify-self: center;
+    align-self: center;
     grid-column: span 2;
     @include type-2(80px);
+    @include media(m) {
+      @include type-2(32px);
+    }
     @include themify("color", "text");
   }
-  .cardDesc {
-    div {
-      display: flex;
-      flex-direction: column;
+  > div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap7 + 20;
+    @include media(t) {
+      gap: $gap4;
+    }
+    @include media(m) {
+      grid-template-columns: 1fr;
+    }
+    .cardDesc {
+      @include media(t) {
+        min-height: 200px;
+      }
+      @include media(m) {
+        display: none;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: $gap3;
+
+        p:nth-child(1) {
+          @include type-1(40px);
+          @include themify("color", "card-title");
+        }
+        p:nth-child(2) {
+          @include type-1(18px);
+          @include themify("color", "text");
+        }
+      }
+    }
+    .iconsCard {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
       gap: $gap3;
-      p:nth-child(1) {
-        @include type-1(40px);
-        @include themify("color", "card-title");
+      @include media(t) {
+        justify-content: center;
+        justify-self: center;
+        align-self: self-end;
       }
-      p:nth-child(2) {
-        @include type-1(18px);
-        @include themify("color", "text");
+      div {
+        align-self: self-start;
+        @include card;
+        svg {
+          color: currentColor;
+        }
       }
-    }
-  }
-  .iconsCard {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap3;
-    div {
-      @include card;
-      width: fit-content;
-      svg {
-        color: currentColor;
+      .active {
+        border: 1px solid $p1 !important;
       }
-    }
-    .active {
-      border: 1px solid $p1 !important;
+      @include media(m) {
+        .active {
+          @include themify("border-color", "card-border");
+        }
+      }
     }
   }
 }

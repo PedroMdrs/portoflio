@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 .skills {
-  display: grid;
-  row-gap: 120px;
-  -moz-column-gap: 120px;
-       column-gap: 120px;
-  align-items: start;
-  grid-template: auto auto/1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  align-items: self-start;
   margin-top: 260px;
 }
+@media only screen and (max-width: 1400px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .skills {
+    margin-top: 160px;
+  }
+}
 .skills h3 {
-  justify-self: center;
+  align-self: center;
   grid-column: span 2;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -17,77 +29,126 @@
   font-size: 80px;
   line-height: 120px;
 }
+@media only screen and (max-width: 760px) {
+  .skills h3 {
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 .skills h3.dark {
   color: #e0e0e0;
 }
 .skills h3.light {
   color: #000000;
 }
-.skills .cardDesc div {
+.skills > div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 140px;
+}
+@media only screen and (max-width: 1400px) {
+  .skills > div {
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .skills > div {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .skills > div .cardDesc {
+    min-height: 200px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .skills > div .cardDesc {
+    display: none;
+  }
+}
+.skills > div .cardDesc div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.skills .cardDesc div p:nth-child(1) {
+.skills > div .cardDesc div p:nth-child(1) {
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
 }
-.skills .cardDesc div p:nth-child(1).dark {
+.skills > div .cardDesc div p:nth-child(1).dark {
   color: #666666;
 }
-.skills .cardDesc div p:nth-child(1).light {
+.skills > div .cardDesc div p:nth-child(1).light {
   color: #a3a3a3;
 }
-.skills .cardDesc div p:nth-child(2) {
+.skills > div .cardDesc div p:nth-child(2) {
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
 }
-.skills .cardDesc div p:nth-child(2).dark {
+.skills > div .cardDesc div p:nth-child(2).dark {
   color: #e0e0e0;
 }
-.skills .cardDesc div p:nth-child(2).light {
+.skills > div .cardDesc div p:nth-child(2).light {
   color: #000000;
 }
-.skills .iconsCard {
-  display: flex;
-  flex-wrap: wrap;
+.skills > div .iconsCard {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
   gap: 20px;
 }
-.skills .iconsCard div {
+@media only screen and (max-width: 1400px) {
+  .skills > div .iconsCard {
+    justify-content: center;
+    justify-self: center;
+    align-self: self-end;
+  }
+}
+.skills > div .iconsCard div {
+  align-self: self-start;
   background: #e0e0e0;
   padding: 20px;
   border: 1px solid;
   border-radius: 2px;
   box-shadow: -1px 1px 4px 0px rgba(0, 0, 0, 0.25);
-  width: -moz-fit-content;
-  width: fit-content;
 }
-.skills .iconsCard div.dark {
+.skills > div .iconsCard div.dark {
   border-color: #1c1c1c;
 }
-.skills .iconsCard div.light {
+.skills > div .iconsCard div.light {
   border-color: #cccccc;
 }
-.skills .iconsCard div.dark {
+.skills > div .iconsCard div.dark {
   background: #141414;
 }
-.skills .iconsCard div.light {
+.skills > div .iconsCard div.light {
   background: #e0e0e0;
 }
-.skills .iconsCard div.dark {
+.skills > div .iconsCard div.dark {
   color: #141414;
 }
-.skills .iconsCard div.light {
+.skills > div .iconsCard div.light {
   color: #e0e0e0;
 }
-.skills .iconsCard div:hover {
+.skills > div .iconsCard div:hover {
   border: 1px solid #dc1891;
 }
-.skills .iconsCard div svg {
+.skills > div .iconsCard div svg {
   color: currentColor;
 }
-.skills .iconsCard .active {
+.skills > div .iconsCard .active {
   border: 1px solid #dc1891 !important;
+}
+@media only screen and (max-width: 760px) {
+  .skills > div .iconsCard .active.dark {
+    border-color: #1c1c1c;
+  }
+  .skills > div .iconsCard .active.light {
+    border-color: #cccccc;
+  }
 }/*# sourceMappingURL=Skills.module.css.map */

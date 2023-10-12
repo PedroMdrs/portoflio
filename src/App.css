@@ -8,7 +8,6 @@
 
 body {
   overflow-x: hidden;
-  padding: 48px 260px 0 260px;
   margin: 0px;
 }
 
@@ -44,8 +43,13 @@ input {
 }
 
 body {
-  height: 100vh;
+  padding: 48px 260px 120px 260px;
   font-family: "Archivo", sans-serif;
+}
+@media only screen and (max-width: 1400px) {
+  body {
+    padding: 16px 16px 120px 16px;
+  }
 }
 
 [data-theme=light] {

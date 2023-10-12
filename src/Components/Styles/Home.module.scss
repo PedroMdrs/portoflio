@@ -6,15 +6,23 @@
   @include column-flex;
   gap: $gap7;
   margin-top: $gap9;
+
   .title {
     @include column-flex;
     gap: $gap1;
+    text-align: center;
     h1 {
+      @include media(m) {
+        @include type-2(32px);
+      }
       @include type-2(80px);
       @include themify("color", "text");
       word-break: keep-all;
     }
     h2 {
+      @include media(m) {
+        @include type-1(18px);
+      }
       @include type-1(24px);
       @include themify("color", "text");
 

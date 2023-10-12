@@ -1,11 +1,16 @@
 @use "reset" as *;
 @use "colors" as *;
 @use "mixins" as *;
+@use "gaps" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap");
 
 body {
-  height: 100vh;
+  padding: $gap5 $gap9 $gap7 $gap9;
   font-family: "Archivo", sans-serif;
+  @include media(t) {
+    padding: $gap2 $gap2 $gap7 $gap2;
+  }
 }
 
 [data-theme="light"] {
