@@ -2,69 +2,108 @@
 @use "../../gaps" as *;
 @use "../../mixins" as *;
 
-.logo {
-  position: relative;
-  @include type-2(18px);
-  @include hover-divider;
-  @include themify("color", "text");
+header {
   @include media(m) {
-    align-self: center;
-  }
-}
-.routes {
-  display: flex;
-  gap: $gap3;
-
-  .route {
-    @include hover-divider;
-    @include type-1(18px);
-    overflow: hidden;
-    color: $g8;
-  }
-}
-
-.icons {
-  display: flex;
-  gap: $gap1;
-  position: relative;
-
-  a,
-  div {
-    flex-shrink: 0;
-    color: $g8;
-    cursor: pointer;
-  }
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include themify("background", "primary");
-  @include media(m) {
-    display: none;
-  }
-}
-
-.mobileNav {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  @include media(m) {
-    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     width: 100%;
-  }
-  > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include themify("background", "mobile-menu");
-    padding: $gap1;
     border-bottom: 1px solid;
-    @include themify("border-color", "border");
+    @include themify("border-color", "card-border");
+    @include themify("background", "mobile-menu");
+  }
+
+  nav {
+    @include media(m) {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%);
+      width: 100%;
+      min-height: 50vh;
+      opacity: 0;
+      min-height: 0;
+      max-height: 0;
+      pointer-events: none;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      @include themify("background", "mobile-menu");
+      &.open {
+        opacity: 1;
+        min-height: 100vh;
+        max-height: 100vh;
+        pointer-events: auto;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include themify("background", "primary");
+    padding: $gap2;
+  }
+  .logo {
+    position: relative;
+    @include type-2(18px);
+    @include hover-divider;
+    @include themify("color", "text");
+    @include media(m) {
+      align-self: center;
+    }
+  }
+  .routes {
+    display: flex;
+    gap: $gap3;
+    @include media(m) {
+      gap: $gap2;
+      flex-direction: column;
+      padding: $gap5 $gap2 $gap2;
+    }
+    .route {
+      @include hover-divider;
+      @include type-1(18px);
+      overflow: hidden;
+      color: $g8;
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: $gap1;
+    position: relative;
+
+    a,
+    div {
+      flex-shrink: 0;
+      color: $g8;
+      cursor: pointer;
+    }
+    @include media(m) {
+      display: none;
+    }
+  }
+  .iconsMobile {
+    display: none;
+    @include media(m) {
+      display: flex;
+      padding: $gap2;
+      gap: $gap2;
+      li,
+      li a {
+        @include themify("color", "text");
+        cursor: pointer;
+      }
+    }
   }
   .burger {
+    display: none;
+    @include media(m) {
+      display: block;
+    }
     height: 3em;
     width: 3em;
     position: relative;
@@ -74,7 +113,7 @@
     background: transparent;
     border: none;
     -webkit-tap-highlight-color: transparent;
-
+    z-index: 10;
     &:after {
       content: "";
       display: block;
@@ -131,42 +170,5 @@
         }
       }
     }
-  }
-
-  .mobileMenu {
-    position: absolute;
-    left: 0;
-    top: $gap5;
-    display: flex;
-    gap: $gap4;
-    flex-direction: column;
-    padding: $gap3;
-    transition: all 0.3s ease-in-out;
-    .routes {
-      display: flex;
-      flex-direction: column;
-      gap: $gap1;
-    }
-
-    .icons {
-      a,
-      div {
-        @include themify("color", "text");
-      }
-      gap: $gap3;
-    }
-  }
-
-  .menuClosed.mobileMenu {
-    display: none;
-  }
-}
-
-.mobileNav.open {
-  width: 100vw;
-  height: 100vh;
-  @include themify("background", "mobile-menu");
-  > div {
-    border: none;
   }
 }
