@@ -3,11 +3,9 @@ import { useThemeContext } from "../Context/Context";
 import Download from "./Icons/Download";
 import styles from "./Styles/Home.module.css";
 import Arrow from "./Icons/Arrow";
-import React from "react";
 
 const Home = () => {
   const { theme } = useThemeContext();
-  const [title, setTitle] = React.useState(false);
 
   return (
     <div className={styles.home}>
