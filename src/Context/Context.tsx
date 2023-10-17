@@ -22,10 +22,10 @@ export const useThemeContext = () => {
 export const ThemeStorage = ({ children }: React.PropsWithChildren) => {
   const [theme, setTheme] = React.useState<theme>(() => {
     const localTheme = JSON.parse(localStorage.getItem("theme") || "");
-    if (localTheme === "light") {
-      return "light";
+    if (localTheme !== "") {
+      return localTheme === "dark" ? "dark" : "light";
     } else {
-      return "dark";
+      return "light";
     }
   });
 
