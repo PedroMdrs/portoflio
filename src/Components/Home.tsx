@@ -3,47 +3,24 @@ import { useThemeContext } from "../Context/Context";
 import Download from "./Icons/Download";
 import styles from "./Styles/Home.module.css";
 import Arrow from "./Icons/Arrow";
-import Typewriter from "typewriter-effect";
 import React from "react";
 
 const Home = () => {
   const { theme } = useThemeContext();
   const [title, setTitle] = React.useState(false);
+
   return (
     <div className={styles.home}>
       <div className={`${styles.title}`}>
         <h1 id="title" className={styles[theme]}>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .pauseFor(1000)
-                .changeDelay(50)
-                .typeString("Hi,")
-                .pauseFor(500)
-                .typeString(" I'm Pedro Medeiros")
-                .callFunction(() => {
-                  setTitle(true);
-                })
-                .start();
-            }}
-          ></Typewriter>
+          Hi, I'm Pedro Medeiros
         </h1>
         <h2 id="sub-title" className={styles[theme]}>
-          {title ? (
-            <Typewriter
-              options={{ skipAddStyles: false }}
-              onInit={(typewriter) => {
-                typewriter
-                  .changeDelay(25)
-                  .typeString(
-                    "A < Front-end Developer /> with lots of energy to learn new things."
-                  )
-                  .start();
-              }}
-            ></Typewriter>
-          ) : (
-            ""
-          )}
+          <div>A</div>
+          <span>&lt; </span>
+          <div>Front-End Developer </div>
+          <span> /&gt; </span>
+          <div>with lots of energy to learn new things.</div>
         </h2>
       </div>
       <a

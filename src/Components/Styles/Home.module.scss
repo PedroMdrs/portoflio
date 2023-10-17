@@ -26,6 +26,9 @@
       }
       @include type-1(24px);
       @include themify("color", "text");
+      div {
+        display: inline-block;
+      }
       span {
         @include text-gradient;
       }

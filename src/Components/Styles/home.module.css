@@ -65,6 +65,9 @@
 .home .title h2.light {
   color: #000000;
 }
+.home .title h2 div {
+  display: inline-block;
+}
 .home .title h2 span {
   background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
   background-clip: text;
