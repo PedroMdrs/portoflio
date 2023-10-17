@@ -1,5 +1,7 @@
+import { NavLink } from "react-router-dom";
 import { useThemeContext } from "../Context/Context";
 import styles from "./Styles/Projects.module.css";
+import Arrow from "./Icons/Arrow";
 
 const Projects = () => {
   const { theme } = useThemeContext();
@@ -50,11 +52,20 @@ const Projects = () => {
         </div>
       </div>
       <a
+        title="See all repositories in github"
         href="https://github.com/PedroMdrs?tab=repositories"
         className={styles.repo}
       >
         Github Repositories
       </a>
+      <div className={`${styles.tab} ${styles[theme]}`}>
+        <NavLink title="Previous Page" to={"/"}>
+          <Arrow />
+        </NavLink>
+        <NavLink title="Next Page" to={"/skills"}>
+          <Arrow />
+        </NavLink>
+      </div>
     </section>
   );
 };

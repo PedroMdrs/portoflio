@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 .home {
   display: flex;
   flex-direction: column;
@@ -21,7 +26,6 @@
   font-weight: 700;
   font-size: 80px;
   line-height: 120px;
-  word-break: keep-all;
 }
 @media only screen and (max-width: 760px) {
   .home .title h1 {
@@ -36,6 +40,12 @@
 }
 .home .title h1.light {
   color: #000000;
+}
+.home .title h1.dark {
+  border-color: #e0e0e0;
+}
+.home .title h1.light {
+  border-color: #000000;
 }
 .home .title h2 {
   font-weight: 500;
@@ -71,6 +81,8 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
+  display: flex;
+  align-items: centers;
 }
 .home a.dark {
   background: #292929;
@@ -98,4 +110,22 @@
 }
 .home a.light {
   border-color: #b8b8b8;
+}
+.home .tab {
+  display: none;
+}
+.home .tab.dark {
+  color: #292929;
+}
+.home .tab.light {
+  color: #b8b8b8;
+}
+@media only screen and (max-width: 760px) {
+  .home .tab {
+    display: block;
+  }
+  .home .tab a {
+    color: currentColor;
+    border: none !important;
+  }
 }/*# sourceMappingURL=Home.module.css.map */

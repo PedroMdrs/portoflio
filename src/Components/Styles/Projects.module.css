@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 .projects {
   display: flex;
   flex-direction: column;
@@ -146,4 +151,27 @@
   left: 0;
   right: auto;
   width: 100%;
+}
+.projects .tab {
+  display: none;
+  border: none;
+}
+.projects .tab.dark {
+  color: #292929;
+}
+.projects .tab.light {
+  color: #b8b8b8;
+}
+@media only screen and (max-width: 760px) {
+  .projects .tab {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .projects .tab a {
+    color: currentColor;
+  }
+  .projects .tab a:nth-child(1) {
+    transform: rotate(180deg);
+  }
 }/*# sourceMappingURL=Projects.module.css.map */

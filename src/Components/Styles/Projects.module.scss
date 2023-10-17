@@ -55,4 +55,20 @@
     @include type-1(18px);
     @include hover-divider;
   }
+  .tab {
+    display: none;
+    border: none;
+    @include themify("color", "border");
+    @include media(m) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      a {
+        color: currentColor;
+      }
+      a:nth-child(1) {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

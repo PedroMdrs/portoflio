@@ -86,4 +86,18 @@
       }
     }
   }
+  .tab {
+    display: none;
+    @include themify("color", "border");
+
+    @include media(m) {
+      display: flex;
+      justify-content: flex-end;
+      transform: rotate(180deg);
+      a {
+        border: none !important;
+        color: currentColor;
+      }
+    }
+  }
 }

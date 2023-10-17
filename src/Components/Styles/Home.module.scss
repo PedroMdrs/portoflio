@@ -17,23 +17,38 @@
       }
       @include type-2(80px);
       @include themify("color", "text");
-      word-break: keep-all;
+      @include themify("border-color", "text");
     }
+
     h2 {
       @include media(m) {
         @include type-1(18px);
       }
       @include type-1(24px);
       @include themify("color", "text");
-
       span {
         @include text-gradient;
       }
     }
   }
+
   a {
     @include button;
     @include type-1(18px);
     @include themify("border-color", "border");
+    display: flex;
+    align-items: centers;
+  }
+  .tab {
+    display: none;
+    @include themify("color", "border");
+    @include media(m) {
+      display: block;
+
+      a {
+        color: currentColor;
+        border: none !important;
+      }
+    }
   }
 }

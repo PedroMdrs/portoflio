@@ -1,4 +1,4 @@
-import { NavLink, json } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Github from "./Icons/Github";
 import Linkedin from "./Icons/Linkedin";
 import { useThemeContext } from "../Context/Context";
@@ -117,6 +117,7 @@ const Header = () => {
           )}
         </div>
         <button
+          title="menu"
           className={`${styles.burger} ${styles[theme]} ${
             mobileButton ? styles.open : ""
           }`}

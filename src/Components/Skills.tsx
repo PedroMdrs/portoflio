@@ -9,6 +9,8 @@ import Bootstrap from "./Icons/Bootstrap";
 import Mongodb from "./Icons/Mongodb";
 import styles from "./Styles/Skills.module.css";
 import { useThemeContext } from "../Context/Context";
+import { NavLink } from "react-router-dom";
+import Arrow from "./Icons/Arrow";
 
 const Skills = () => {
   const [activeIcon, setActiveIcon] = React.useState("html");
@@ -176,6 +178,11 @@ const Skills = () => {
             <Mongodb />
           </div>
         </div>
+      </div>
+      <div title="Previous Page" className={`${styles.tab} ${styles[theme]}`}>
+        <NavLink title="Previous Page" to={"/projects"}>
+          <Arrow />
+        </NavLink>
       </div>
     </section>
   );
