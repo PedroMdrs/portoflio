@@ -78,7 +78,7 @@ const Header = () => {
               )}
             </li>
           </ul>
-        </nav>{" "}
+        </nav>
         <div className={styles.icons}>
           <a href="https://github.com/PedroMdrs">
             <Github />
