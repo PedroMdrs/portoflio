@@ -47,7 +47,7 @@ const Header = () => {
               </a>
             </li>
             <li className={styles[theme]}>
-              {theme === "dark" ? (
+              {theme === "light" ? (
                 <div
                   onClick={() => {
                     setTheme(() => {
@@ -60,6 +60,7 @@ const Header = () => {
                   }}
                 >
                   <Sun />
+                  <div>sol</div>
                 </div>
               ) : (
                 <div
@@ -73,6 +74,7 @@ const Header = () => {
                       ?.setAttribute("data-theme", "dark");
                   }}
                 >
+                  {" "}
                   <Moon />
                 </div>
               )}
@@ -98,7 +100,7 @@ const Header = () => {
                   ?.setAttribute("data-theme", "light");
               }}
             >
-              <Moon />
+              <Sun />
             </div>
           ) : (
             <div
@@ -112,7 +114,8 @@ const Header = () => {
                   ?.setAttribute("data-theme", "dark");
               }}
             >
-              <Sun />
+              {" "}
+              <Moon />
             </div>
           )}
         </div>
