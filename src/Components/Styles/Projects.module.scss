@@ -30,11 +30,12 @@
     .card {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       max-width: 560px;
       min-height: 224px;
       padding: $gap3;
       gap: $gap2;
+      position: relative;
       @include card;
       p:nth-child(1) {
         @include type-2(32px);
@@ -47,6 +48,8 @@
       a {
         @include type-1(18px);
         @include text-gradient;
+        position: absolute;
+        bottom: $gap2;
       }
     }
   }

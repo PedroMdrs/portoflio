@@ -58,11 +58,12 @@
 .projects .cards .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   max-width: 560px;
   min-height: 224px;
   padding: 20px;
   gap: 16px;
+  position: relative;
   background: #e0e0e0;
   padding: 20px;
   border: 1px solid;
@@ -121,6 +122,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 16px;
 }
 .projects .repo {
   background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
