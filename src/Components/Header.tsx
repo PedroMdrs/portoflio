@@ -59,7 +59,7 @@ const Header = () => {
                       ?.setAttribute("data-theme", "light");
                   }}
                 >
-                  <Moon />
+                  <Sun />
                 </div>
               ) : (
                 <div
@@ -73,7 +73,7 @@ const Header = () => {
                       ?.setAttribute("data-theme", "dark");
                   }}
                 >
-                  <Sun />
+                  <Moon />
                 </div>
               )}
             </li>

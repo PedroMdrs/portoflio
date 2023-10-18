@@ -21,21 +21,20 @@ export const useThemeContext = () => {
 
 export const ThemeStorage = ({ children }: React.PropsWithChildren) => {
   const [theme, setTheme] = React.useState<theme>(() => {
-    const localTheme = JSON.parse(localStorage.getItem("theme") || "");
-    if (localTheme !== "") {
-      return localTheme === "dark" ? "dark" : "light";
-    } else {
-      return "light";
-    }
+    const localTheme = localStorage.getItem("theme");
+    if (!localTheme) return "light";
+    return JSON.parse(localTheme) === "dark" ? "dark" : "light";
   });
 
   React.useEffect(() => {
-    const localTheme = JSON.parse(localStorage.getItem("theme") || "");
-    if (localTheme === "light") {
+    const localTheme = localStorage.getItem("theme");
+    if (!localTheme) {
       document.querySelector("body")?.setAttribute("data-theme", "light");
-    } else {
-      document.querySelector("body")?.setAttribute("data-theme", "dark");
+      return;
     }
+    return JSON.parse(localTheme) === "dark"
+      ? document.querySelector("body")?.setAttribute("data-theme", "dark")
+      : document.querySelector("body")?.setAttribute("data-theme", "light");
   }, [theme]);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
