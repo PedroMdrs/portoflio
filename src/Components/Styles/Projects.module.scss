@@ -48,8 +48,7 @@
       a {
         @include type-1(18px);
         @include text-gradient;
-        position: absolute;
-        bottom: $gap2;
+        margin-top: auto;
       }
     }
   }

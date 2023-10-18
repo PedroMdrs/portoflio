@@ -122,8 +122,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: absolute;
-  bottom: 16px;
+  margin-top: auto;
 }
 .projects .repo {
   background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
