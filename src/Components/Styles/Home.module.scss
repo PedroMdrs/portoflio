@@ -18,6 +18,14 @@
       @include type-2(80px);
       @include themify("color", "text");
       @include themify("border-color", "text");
+      @keyframes cursor {
+        to {
+          opacity: 1;
+        }
+      }
+      div {
+        display: inline-block;
+      }
     }
 
     h2 {

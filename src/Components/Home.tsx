@@ -3,6 +3,7 @@ import { useThemeContext } from "../Context/Context";
 import Download from "./Icons/Download";
 import styles from "./Styles/Home.module.css";
 import Arrow from "./Icons/Arrow";
+import Typewriter from "./Typewriter";
 
 const Home = () => {
   const { theme } = useThemeContext();
@@ -11,14 +12,19 @@ const Home = () => {
     <div className={styles.home}>
       <div className={`${styles.title}`}>
         <h1 id="title" className={styles[theme]}>
-          Hi, I'm Pedro Medeiros
+          <Typewriter text="Hi, " />
+          <Typewriter container={"span"} text=" I'm Pedro Medeiros" delay={1} />
         </h1>
         <h2 id="sub-title" className={styles[theme]}>
-          <div>A</div>
-          <span>&lt; </span>
-          <div>Front-End Developer </div>
-          <span> /&gt; </span>
-          <div>with lots of energy to learn new things.</div>
+          <Typewriter text="A " speed={30} delay={4} />
+          <Typewriter container={"span"} text=" < " speed={30} delay={4.1} />
+          <Typewriter text="Front-End Developer" speed={30} delay={4.2} />
+          <Typewriter container={"span"} text=" /> " speed={30} delay={4.2} />
+          <Typewriter
+            text="with lots of energy to learn new things."
+            speed={30}
+            delay={4.9}
+          />
         </h2>
       </div>
       <a

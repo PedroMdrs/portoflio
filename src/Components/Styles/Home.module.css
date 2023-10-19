@@ -47,6 +47,14 @@
 .home .title h1.light {
   border-color: #000000;
 }
+@keyframes cursor {
+  to {
+    opacity: 1;
+  }
+}
+.home .title h1 div {
+  display: inline-block;
+}
 .home .title h2 {
   font-weight: 500;
   font-size: 24px;
