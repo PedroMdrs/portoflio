@@ -33,7 +33,9 @@ const Projects = () => {
             A template for a multi step form built with HTML, CSS, Javascript
             and React.
           </p>
-          <a href="https://pedromdrs.github.io/multi-step-form/">See Project</a>
+          <a href="https://multi-step-form-weld-nine.vercel.app/">
+            See Project
+          </a>
         </div>
         <div className={`${styles.card} ${styles[theme]}`}>
           <p className={styles[theme]}>W.</p>
