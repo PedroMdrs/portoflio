@@ -5,12 +5,17 @@
 .home {
   @include column-flex;
   gap: $gap7;
+  max-height: 100vh;
   margin-top: $gap9;
-
   .title {
     @include column-flex;
     gap: $gap1;
     text-align: center;
+
+    h1 > span[data-cursor="hide"],
+    h2 > span[data-cursor="hide"] {
+      display: none;
+    }
     h1 {
       @include media(m) {
         @include type-2(32px);
@@ -18,16 +23,16 @@
       @include type-2(80px);
       @include themify("color", "text");
       @include themify("border-color", "text");
-      @keyframes cursor {
-        to {
-          opacity: 1;
-        }
-      }
+
       div {
-        display: inline-block;
+        display: inline;
       }
     }
-
+    @keyframes cursor {
+      to {
+        opacity: 0;
+      }
+    }
     h2 {
       @include media(m) {
         @include type-1(18px);
@@ -35,31 +40,55 @@
       @include type-1(24px);
       @include themify("color", "text");
       div {
-        display: inline-block;
+        display: inline;
       }
-      span {
+      .typewriterContainer span {
         @include text-gradient;
       }
     }
   }
 
-  a {
+  > a {
     @include button;
     @include type-1(18px);
     @include themify("border-color", "border");
     display: flex;
-    align-items: centers;
+    opacity: 0;
+    position: relative;
+    bottom: -50px;
   }
   .tab {
     display: none;
     @include themify("color", "border");
     @include media(m) {
       display: block;
-
+      position: relative;
+      opacity: 0;
+      right: 100px;
       a {
         color: currentColor;
         border: none !important;
       }
     }
+  }
+}
+
+.slideUp {
+  animation: slideUp 0.5s forwards;
+}
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+.slideRight {
+  animation: slideRight 0.8s forwards;
+}
+@keyframes slideRight {
+  to {
+    right: 0;
+    opacity: 1;
   }
 }

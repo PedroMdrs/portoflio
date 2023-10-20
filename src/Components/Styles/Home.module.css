@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 120px;
+  max-height: 100vh;
   margin-top: 260px;
 }
 .home .title {
@@ -19,6 +20,10 @@
   align-items: center;
   gap: 12px;
   text-align: center;
+}
+.home .title h1 > span[data-cursor=hide],
+.home .title h2 > span[data-cursor=hide] {
+  display: none;
 }
 .home .title h1 {
   font-weight: 500;
@@ -47,13 +52,13 @@
 .home .title h1.light {
   border-color: #000000;
 }
+.home .title h1 div {
+  display: inline;
+}
 @keyframes cursor {
   to {
-    opacity: 1;
+    opacity: 0;
   }
-}
-.home .title h1 div {
-  display: inline-block;
 }
 .home .title h2 {
   font-weight: 500;
@@ -74,15 +79,15 @@
   color: #000000;
 }
 .home .title h2 div {
-  display: inline-block;
+  display: inline;
 }
-.home .title h2 span {
+.home .title h2 .typewriterContainer span {
   background: linear-gradient(270deg, #dc1891 0%, #931061 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.home a {
+.home > a {
   display: inline-flex;
   padding: 10px 20px;
   align-items: center;
@@ -93,33 +98,35 @@
   font-size: 18px;
   line-height: 32px;
   display: flex;
-  align-items: centers;
+  opacity: 0;
+  position: relative;
+  bottom: -50px;
 }
-.home a.dark {
+.home > a.dark {
   background: #292929;
 }
-.home a.light {
+.home > a.light {
   background: #b8b8b8;
 }
-.home a.dark {
+.home > a.dark {
   color: #e0e0e0;
 }
-.home a.light {
+.home > a.light {
   color: #000000;
 }
-.home a:hover {
+.home > a:hover {
   background: transparent;
 }
-.home a:hover.dark {
+.home > a:hover.dark {
   border-color: #292929;
 }
-.home a:hover.light {
+.home > a:hover.light {
   border-color: #b8b8b8;
 }
-.home a.dark {
+.home > a.dark {
   border-color: #292929;
 }
-.home a.light {
+.home > a.light {
   border-color: #b8b8b8;
 }
 .home .tab {
@@ -134,9 +141,33 @@
 @media only screen and (max-width: 760px) {
   .home .tab {
     display: block;
+    position: relative;
+    opacity: 0;
+    right: 100px;
   }
   .home .tab a {
     color: currentColor;
     border: none !important;
+  }
+}
+
+.slideUp {
+  animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.slideRight {
+  animation: slideRight 0.8s forwards;
+}
+
+@keyframes slideRight {
+  to {
+    right: 0;
+    opacity: 1;
   }
 }/*# sourceMappingURL=Home.module.css.map */

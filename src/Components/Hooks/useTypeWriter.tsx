@@ -9,7 +9,6 @@ export const useTypewriter = (text: string, speed = 100, delay = 0) => {
       const typingInterval = setInterval(() => {
         if (i < text.length) {
           setDisplayText(text.substring(0, i + 1));
-          console.log(text.substring(0, i + 1));
           i++;
         } else {
           clearInterval(typingInterval);

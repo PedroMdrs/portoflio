@@ -44,6 +44,7 @@
        column-gap: 40px;
   row-gap: 80px;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 @media only screen and (max-width: 1400px) {
   .projects .cards {
