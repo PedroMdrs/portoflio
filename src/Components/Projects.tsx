@@ -28,6 +28,13 @@ const Projects = () => {
           <a href="https://x-front-end-kappa.vercel.app/">See Project</a>
         </div>
         <div className={`${styles.card} ${styles[theme]}`}>
+          <p className={styles[theme]}>Portfolio</p>
+          <p className={styles[theme]}>
+            This website. Built with Typescript, React and Sass.
+          </p>
+          <a href="https://pedromdrs.github.io/site/">See Project</a>
+        </div>
+        <div className={`${styles.card} ${styles[theme]}`}>
           <p className={styles[theme]}>Multi Step Form</p>
           <p className={styles[theme]}>
             A template for a multi step form built with HTML, CSS, Javascript
