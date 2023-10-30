@@ -42,11 +42,6 @@ input {
   display: block;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
 body {
   padding: 48px 260px 120px 260px;
   font-family: "Archivo", sans-serif;

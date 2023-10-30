@@ -22,10 +22,18 @@ const Projects = () => {
         <div className={`${styles.card} ${styles[theme]}`}>
           <p className={` ${styles[theme]}`}>Decentralized Twitter/𝕏</p>
           <p className={styles[theme]}>
-            Web 3 version of twitter built on top of Ethereum Blockchain.
-            Developed with Javascript, React, VueJs and Tailwind.
+            Web 3 version of twitter built on top of Ethereum Blockchain. Built
+            with Javascript, React, VueJs and Tailwind.
           </p>
           <a href="https://x-front-end-kappa.vercel.app/">See Project</a>
+        </div>
+        <div className={`${styles.card} ${styles[theme]}`}>
+          <p className={` ${styles[theme]}`}>Countries</p>
+          <p className={styles[theme]}>
+            An application to search any country and visualize detailed
+            informations about it. Built with Typescript, React and Sass.
+          </p>
+          <a href="https://pedromdrs.github.io/countries/">See Project</a>
         </div>
         <div className={`${styles.card} ${styles[theme]}`}>
           <p className={styles[theme]}>Portfolio</p>
@@ -50,10 +58,6 @@ const Projects = () => {
             News website built with HTML, CSS and Javascript.
           </p>
           <a href="https://pedromdrs.github.io/News-Home-Page/">See Project</a>
-        </div>
-        <div className={`${styles.card} ${styles[theme]}`}>
-          <p className={styles[theme]}>???</p>
-          <p className={styles[theme]}>Working on it 🤫</p>
         </div>
         <div className={`${styles.card} ${styles[theme]}`}>
           <p className={styles[theme]}>???</p>

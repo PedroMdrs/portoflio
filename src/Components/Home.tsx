@@ -58,7 +58,7 @@ const Home = () => {
       <a
         title="Download Resume"
         className={`${styles[theme]} ${button ? styles.slideUp : ""}`}
-        href="Resume.pdf"
+        href="PedroMedeiros.pdf"
         download="PedroMedeirosResume.pdf"
       >
         <Download /> <p>Download Resume</p>
